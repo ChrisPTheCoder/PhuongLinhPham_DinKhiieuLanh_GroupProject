@@ -2,6 +2,11 @@
     <string name="app_name">Restaurant Delivery App</string>
     <string name="welcome">Welcome! We are here to serve you!</string>
     <string name="signin">Sign In</string>
+    <string name="signUp">Sign Up</string>
     <string name="not_a_member">Not a member? Sign Up</string>
-
+    <string name="become_our_guest">Become Our Guest!</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_address">Enter your address</string>
 </resources>
