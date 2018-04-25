@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Restaurant Delivery App</string>
+    <string name="welcome">Welcome! We are here to serve you!</string>
+    <string name="signin">Sign In</string>
+    <string name="not_a_member">Not a member? Sign Up</string>
+
+</resources>
