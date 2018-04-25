@@ -11,14 +11,11 @@
 
 
     <LinearLayout
-        android:id="@+id/ll1"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/main_activity_margin_eight"
-        android:layout_marginRight="@dimen/main_activity_margin_eight"
-        android:layout_above="@+id/ll12"
-        android:layout_alignParentTop="true">
+        android:layout_marginRight="@dimen/main_activity_margin_eight">
 
         <TextView
             android:layout_width="match_parent"
@@ -36,23 +33,23 @@
             android:src="@drawable/orderlogo" />
 
         <EditText
-            android:id="@+id/id"
+            android:id="@+id/txtName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:backgroundTint="#ffffff"
-            android:hint="Enter Your Email"
-            android:inputType="textEmailAddress"
+            android:hint="@string/enter_your_name"
+            android:inputType="textPersonName"
             android:textColor="#ffffff"
             android:textColorHint="#606060" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:inputType="textPassword"
-            android:hint="Password"
+            android:hint="@string/enter_your_password"
             android:textColorHint="#606060"
             android:backgroundTint="#ffffff"
             android:textColor="#ffffff"
-            android:id="@+id/pass"
+            android:id="@+id/txtPassword"
             android:fontFamily="sans-serif"/>
             <Button
                 android:id="@+id/loginBtn"
