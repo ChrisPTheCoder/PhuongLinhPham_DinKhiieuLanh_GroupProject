@@ -17,9 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".ShowMenuActivity" />
-        <activity android:name=".ItemSelectedActivity" />
-        <activity android:name=".CheckOutActivity"></activity>
+        <activity android:name=".OrderPageActivity" />
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".NewPizzaActivity" />
+        <activity android:name=".DesignPizzaActivity"></activity>
     </application>
 
 </manifest>

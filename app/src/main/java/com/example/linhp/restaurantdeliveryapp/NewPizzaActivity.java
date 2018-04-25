@@ -3,11 +3,11 @@ package com.example.linhp.restaurantdeliveryapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CheckOutActivity extends AppCompatActivity {
+public class NewPizzaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_out);
+        setContentView(R.layout.activity_new_pizza);
     }
 }
