@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void register(View view)
     {
-        Intent i = new Intent(this, OrderPageActivity.class);
+        Intent i = new Intent(this, SignUpActivity.class);
         startActivity(i);
     }
     public void login (View view)
