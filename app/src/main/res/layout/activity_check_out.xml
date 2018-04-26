@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context="com.example.linhp.restaurantdeliveryapp.SignUpActivity">
+    tools:context="com.example.linhp.restaurantdeliveryapp.CheckOutActivity">
 
 
     <ImageView
@@ -14,11 +14,11 @@
         android:src="@drawable/register" />
 
     <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAlignment="center"
-    android:textSize="@dimen/textSize30dp"
-    android:text="@string/become_our_guest"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize20dp"
+        android:text="@string/customer_info"/>
 
     <EditText
         android:id="@+id/txtName"
@@ -37,14 +37,6 @@
         android:hint="@string/enter_your_email"/>
 
     <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="@string/enter_your_password" />
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -54,17 +46,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <RadioButton
-        android:id="@+id/debit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/debit"/>
-    <RadioButton
-        android:id="@+id/credit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/credit"/>
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize20dp"
+            android:text="@string/choose_card_type"/>
+        <RadioButton
+            android:id="@+id/debit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debit"/>
+        <RadioButton
+            android:id="@+id/credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credit"/>
+    </LinearLayout>
     <EditText
         android:id="@+id/txtCardNum"
         android:layout_width="match_parent"
@@ -73,11 +70,11 @@
         android:inputType="numberPassword"
         android:hint="@string/enter_your_cardnum" />
     <Button
-        android:id="@+id/signUpBtn"
-        android:onClick="signUp"
+        android:id="@+id/checOutBtn"
+        android:onClick="checkOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:textColor="@color/colorText"
-        android:text="@string/signUp" />
+        android:text="@string/checkout_label" />
 </LinearLayout>

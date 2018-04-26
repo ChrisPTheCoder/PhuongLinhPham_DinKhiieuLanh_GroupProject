@@ -30,42 +30,21 @@
         <ImageView
             android:id="@+id/imgMain"
             android:layout_width="fill_parent"
-            android:layout_height="188dp"
+            android:layout_height="301dp"
             android:layout_gravity="center"
+
             android:src="@drawable/pizzadelivery" />
 
-        <EditText
-            android:id="@+id/txtName"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="@string/enter_your_name"
-            android:inputType="textPersonName"
-            android:textColor="#ffffff"
-            android:textColorHint="#606060" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textPassword"
-            android:hint="@string/enter_your_password"
-            android:textColorHint="#606060"
-            android:textColor="#ffffff"
-            android:id="@+id/txtPassword"
-            android:fontFamily="sans-serif"/>
+
             <Button
-                android:id="@+id/loginBtn"
-                android:onClick="login"
+                android:id="@+id/startBtn"
+                android:onClick="start"
                 android:textColor="@color/colorText"
                 android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/signin"/>
-             <TextView
-                 android:id="@+id/signup"
-                 android:onClick="register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="@string/not_a_member"
+                android:text="@string/order_now"/>
+
             />
 </LinearLayout>
 </LinearLayout>

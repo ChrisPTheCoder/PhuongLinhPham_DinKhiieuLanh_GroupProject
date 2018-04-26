@@ -96,7 +96,10 @@ public class OrderPageActivity extends ListActivity implements OnClickListener {
                 break;
             case R.id.checkout_button:
                 if (getListView().getCount() != 0)
-                    checkOutDialog();
+                {
+                    Intent i = new Intent(this,CheckOutActivity.class);
+                    startActivity(i);
+                }
                 else {
                     new AlertDialog.Builder(this).setTitle("Info").setMessage("You must order a pizza, before you can checkout.").setCancelable(false)
                             .setNeutralButton("OK", new DialogInterface.OnClickListener() {
@@ -172,17 +175,6 @@ public class OrderPageActivity extends ListActivity implements OnClickListener {
         startActivity(intent);
     }
 
-    private void checkOutDialog() {
-        new AlertDialog.Builder(this).setTitle(R.string.checkout_title).setMessage(R.string.checkout_text).setCancelable(false)
-                .setNeutralButton("OK", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        data.getWritableDatabase().delete(TABLE_NAME, null, null);
-                        finish();
-                    }
-                }).show();
-    }
 
     private void addEvent(String size, String crust, String toppingsWhole, String toppingsLeft, String toppingsRight) {
         SQLiteDatabase db = data.getWritableDatabase();

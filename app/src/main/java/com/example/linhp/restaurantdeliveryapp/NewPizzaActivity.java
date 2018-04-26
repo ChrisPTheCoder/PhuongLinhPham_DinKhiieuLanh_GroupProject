@@ -171,11 +171,10 @@ public class NewPizzaActivity extends Activity implements OnClickListener {
                 finish();
                 break;
             case R.id.cancel_button:
-                if (id == 999){
-                    data.getWritableDatabase().delete(TABLE_NAME, TOPPINGS_WHOLE + "='none'", null);}
-                else{
-                    data.getWritableDatabase().delete(TABLE_NAME, _ID + "='" + id + "'", null);}
-                finish();
+                Toast.makeText(this, "Order Canceled.", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(this, MainActivity.class);
+                startActivity(i);
+               finish();
                 break;
         }
     }

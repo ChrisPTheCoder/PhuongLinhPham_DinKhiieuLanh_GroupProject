@@ -58,17 +58,15 @@ you have completed your order, select "Checkout" to know the total and what time
     <string name="empty">Your shopping cart is currently empty</string>
     <string name="total">Current Total: $0.00</string>
     <string name="exit">Exit</string>
+    <string name="order_now">Order Now</string>
     <string name="cancel_label">Cancel Order</string>
     <string name="welcome">Welcome! We are here to serve you!</string>
-    <string name="signin">Sign In</string>
-    <string name="signUp">Sign Up</string>
-    <string name="not_a_member">Not a member? Sign Up</string>
-    <string name="become_our_guest">Become Our Guest!</string>
+    <string name="customer_info">CUSTOMER INFORMATION</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="enter_your_email">Enter your email</string>
-    <string name="enter_your_password">Enter your password</string>
     <string name="enter_your_address">Enter your address</string>
     <string name="enter_your_cardnum">Enter your card number</string>
+    <string name="choose_card_type">Choose card type:</string>
     <string name="debit">Debit</string>
     <string name="credit">Credit</string>
 </resources>
