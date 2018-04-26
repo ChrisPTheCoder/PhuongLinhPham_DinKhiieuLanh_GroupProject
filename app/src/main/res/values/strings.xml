@@ -68,4 +68,7 @@ you have completed your order, select "Checkout" to know the total and what time
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="enter_your_address">Enter your address</string>
+    <string name="enter_your_cardnum">Enter your card number</string>
+    <string name="debit">Debit</string>
+    <string name="credit">Credit</string>
 </resources>

@@ -10,7 +10,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="147dp"
         android:src="@drawable/register" />
 
     <TextView
@@ -50,7 +50,28 @@
         android:ems="10"
         android:inputType="text"
         android:hint="@string/enter_your_address" />
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/debit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/debit"/>
+    <RadioButton
+        android:id="@+id/credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit"/>
+</LinearLayout>
+    <EditText
+        android:id="@+id/txtCardNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword"
+        android:hint="@string/enter_your_cardnum" />
     <Button
         android:id="@+id/signUpBtn"
         android:onClick="signUp"
@@ -59,5 +80,4 @@
         android:background="@color/colorPrimary"
         android:textColor="@color/colorText"
         android:text="@string/signUp" />
-
 </LinearLayout>
