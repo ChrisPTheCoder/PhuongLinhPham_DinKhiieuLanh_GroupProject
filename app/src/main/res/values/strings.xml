@@ -54,4 +54,8 @@
     <string name="debit">Debit</string>
     <string name="credit">Credit</string>
     <string name="enter_phone_no">Enter your phone number:</string>
+    <string name="title_activity_sms">SMSActivity</string>
+    <string name="have_question">Have any question? </string>
+    <string name="send_sms">Send SMS!</string>
+    <string name="back">Back</string>
 </resources>

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.linhp.restaurantdeliveryapp">
 
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +22,16 @@
         </activity>
         <activity android:name=".OrderPageActivity" />
         <activity android:name=".NewPizzaActivity" />
-        <activity android:name=".CheckOutActivity"></activity>
+        <activity android:name=".CheckOutActivity" />
+        <activity android:name=".SMSActivity" />
+        <activity android:name=".ParentActivity" />
+        <activity android:name=".ThanksActivity"></activity>
+        <receiver android:name=".SMSReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".MusicService" />
     </application>
 
 </manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/contact"
+		android:title="Contact Us" />
+	<item
+		android:id="@+id/musicOn"
+		android:title="Play music" />
+	<item
+		android:id="@+id/musicOff"
+		android:title="Stop music" />
+</menu>

@@ -29,7 +29,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class NewPizzaActivity extends Activity implements OnClickListener {
+public class NewPizzaActivity extends ParentActivity implements OnClickListener {
     private RadioButton wholeRadio;
     private RadioButton leftRadio;
     private TextView wholeText;
