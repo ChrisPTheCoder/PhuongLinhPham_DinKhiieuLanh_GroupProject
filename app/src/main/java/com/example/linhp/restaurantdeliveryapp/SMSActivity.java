@@ -1,14 +1,18 @@
 package com.example.linhp.restaurantdeliveryapp;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SMSActivity extends ParentActivity {
+    private static final int SMS_PERMISSION_CODE = 0;
     String SENT = "SMS_SENT";
     String DELIVERED = "SMS_DELIVERED";
     PendingIntent sentPI, deliveredPI;
@@ -31,7 +36,7 @@ public class SMSActivity extends ParentActivity {
         //override the onReceive to receive messages
         @Override
         public void onReceive(Context context, Intent intent) {
-            //�-display the SMS received in the TextView�-
+            //ï¿½-display the SMS received in the TextViewï¿½-
             //TextView SMSes = (TextView) findViewById(R.id.textView1);
             //display the content of the received message in text view
             //SMSes.setText(intent.getExtras().getString("sms"));
@@ -44,6 +49,10 @@ public class SMSActivity extends ParentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
 
+        if(!isStatePermissionGranted()) {
+            requestStatePermission();
+        }
+
         editText1 = (EditText)findViewById(R.id.editText1);
         //an action to take in the future with same permission
         //as your application
@@ -53,7 +62,7 @@ public class SMSActivity extends ParentActivity {
         deliveredPI = PendingIntent.getBroadcast(this, 0,
                 new Intent(DELIVERED), 0);
 
-        //�-intent to filter the action for SMS messages received�-
+        //ï¿½-intent to filter the action for SMS messages receivedï¿½-
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
 
@@ -145,10 +154,43 @@ public class SMSActivity extends ParentActivity {
         sendSMS("5556", editText1.getText().toString());
     }
 
-    //�-sends an SMS message to another device�-
+    //ï¿½-sends an SMS message to another deviceï¿½-
     private void sendSMS(String phoneNumber, String message)
     {
+        if(!isSmsPermissionGranted()) {
+            requestReadAndSendSmsPermission();
+        }
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNumber, null, message, sentPI, deliveredPI);
+    }
+
+    public boolean isSmsPermissionGranted() {
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    /**
+     * Request runtime SMS permission
+     */
+    private void requestReadAndSendSmsPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(SMSActivity.this, Manifest.permission.SEND_SMS)) {
+            // You may display a non-blocking explanation here, read more in the documentation:
+            // https://developer.android.com/training/permissions/requesting.html
+        }
+        ActivityCompat.requestPermissions(SMSActivity.this, new String[]{Manifest.permission.SEND_SMS}, SMS_PERMISSION_CODE);
+    }
+
+    public boolean isStatePermissionGranted() {
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    /**
+     * Request runtime SMS permission
+     */
+    private void requestStatePermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(SMSActivity.this, Manifest.permission.READ_PHONE_STATE)) {
+            // You may display a non-blocking explanation here, read more in the documentation:
+            // https://developer.android.com/training/permissions/requesting.html
+        }
+        ActivityCompat.requestPermissions(SMSActivity.this, new String[]{Manifest.permission.READ_PHONE_STATE}, 1);
     }
 }
