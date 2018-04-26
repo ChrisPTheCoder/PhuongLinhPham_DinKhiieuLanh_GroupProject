@@ -213,49 +213,5 @@ public class OrderPageActivity extends ListActivity implements OnClickListener {
         intent.putExtras(bundle);
         startActivity(intent);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.settings:
-                //			startActivity(new Intent(this, Prefs.class));
-                return true;
-            case R.id.help:
-                new AlertDialog.Builder(this).setTitle(R.string.help_title).setMessage(R.string.edit_order_help).setCancelable(false)
-                        .setNeutralButton("OK", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        }).show();
-                return true;
-            case R.id.exit:
-                new AlertDialog.Builder(this).setTitle(R.string.exit).setMessage("Are you sure you want to exit?").setCancelable(true)
-                        .setNeutralButton("Yes", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                System.exit(0);
-                            }
-                        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                }).show();
-                return true;
-        }
-        return false;
-    }
-
-}
