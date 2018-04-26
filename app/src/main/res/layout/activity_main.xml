@@ -23,15 +23,16 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="@dimen/textSize30dp"
+            android:textColor="@color/colorPrimary"
             android:text="@string/welcome"
             />
 
         <ImageView
             android:id="@+id/imgMain"
             android:layout_width="fill_parent"
-            android:layout_height="253dp"
+            android:layout_height="188dp"
             android:layout_gravity="center"
-            android:src="@drawable/orderlogo" />
+            android:src="@drawable/pizzadelivery" />
 
         <EditText
             android:id="@+id/txtName"
@@ -53,6 +54,8 @@
             <Button
                 android:id="@+id/loginBtn"
                 android:onClick="login"
+                android:textColor="@color/colorText"
+                android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/signin"/>
