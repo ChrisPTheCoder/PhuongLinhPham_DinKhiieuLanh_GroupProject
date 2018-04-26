@@ -1,6 +1,5 @@
 package com.example.linhp.restaurantdeliveryapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import static android.provider.BaseColumns._ID;
 
@@ -17,10 +16,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -40,10 +35,6 @@ public class OrderPageActivity extends ListActivity implements OnClickListener {
         getListView().setChoiceMode(1);
 
         getListView().setOnItemClickListener(new OnItemClickListener() {
-
-            public void onNothingSelected(AdapterView arg0) {
-
-            }
 
             public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
                 cursorEdit = (Cursor) getListView().getItemAtPosition(arg2);
@@ -111,7 +102,6 @@ public class OrderPageActivity extends ListActivity implements OnClickListener {
                             }).show();
                 }
                 break;
-            // More buttons go here (if any) ...
         }
     }
 
@@ -166,12 +156,7 @@ public class OrderPageActivity extends ListActivity implements OnClickListener {
     }
 
     protected void startPizzaCreation() {
-        //		int currentPizza = cursorEdit.getInt(0);
-        //		Bundle bundle = new Bundle();
-        //		bundle.putInt("ID", currentPizza);
-
         Intent intent = new Intent(OrderPageActivity.this, NewPizzaActivity.class);
-        //		intent.putExtras(bundle);
         startActivity(intent);
     }
 

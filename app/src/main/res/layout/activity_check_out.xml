@@ -42,6 +42,12 @@
         android:ems="10"
         android:inputType="text"
         android:hint="@string/enter_your_address" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/enter_phone_no" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,14 +69,13 @@
             android:text="@string/credit"/>
     </LinearLayout>
     <EditText
-        android:id="@+id/txtCardNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberPassword"
         android:hint="@string/enter_your_cardnum" />
     <Button
-        android:id="@+id/checOutBtn"
+        android:id="@+id/checkOutBtn"
         android:onClick="checkOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -53,4 +53,5 @@
     <string name="choose_card_type">Choose card type:</string>
     <string name="debit">Debit</string>
     <string name="credit">Credit</string>
+    <string name="enter_phone_no">Enter your phone number:</string>
 </resources>
