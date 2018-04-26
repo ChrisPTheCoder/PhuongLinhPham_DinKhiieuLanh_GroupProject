@@ -42,15 +42,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:drawableTop="@drawable/more"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorText"
                 android:text="@string/new_pizza_label" />
             <Button
                 android:id="@+id/checkout_button"
                 android:layout_width="130dip"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorText"
                 android:layout_gravity="bottom"
                 android:drawableTop="@drawable/exit"
                 android:text="@string/checkout_label" />
