@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal"
-    android:padding="4dp"
-    tools:context="com.example.linhp.restaurantdeliveryapp.ListViewActivity">
+    android:background="@color/background"
+    android:padding="4dp">
     <ImageView
         android:contentDescription="Avatar"
         android:src="@drawable/avatar"

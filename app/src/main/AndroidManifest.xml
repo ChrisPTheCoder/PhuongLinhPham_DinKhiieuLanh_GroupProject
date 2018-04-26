@@ -18,9 +18,8 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".OrderPageActivity" />
-        <activity android:name=".ListViewActivity" />
         <activity android:name=".NewPizzaActivity" />
-        <activity android:name=".DesignPizzaActivity"></activity>
+        <activity android:name=".DesignPizzaActivity"/>
     </application>
 
 </manifest>
